@@ -1,38 +1,131 @@
-.App {
-  text-align: center;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+  --dark-blue: #280a4c;
+  --light-blue: #5b4d65;
+  --plum: #8e4585;
+  --light-plum: #d8aad3;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  height: 100vh;
+  background: linear-gradient(to bottom, var(--dark-blue), var(--light-blue));
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.chat-history-container {
+  flex-grow: 1;
+  overflow-y: auto;
+  margin-bottom: 20px;
+}
+
+.chat-history {
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-message {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.chat-message p {
+  margin: 0;
+}
+
+.chat-message:nth-child(odd) {
+  background-color: var(--plum);
+}
+
+.chat-message:nth-child(even) {
+  background-color: var(--light-plum);
+  color: black;
+}
+
+textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.map-container {
+  flex-grow: 1;
+}
+
+/* Adding Css to the button */
+button {
+  background-color: var(--plum);
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+/*  giving the button a circular look*/
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.user-message {
+  background-color: var(--light-plum);
+  color: black;
+}
+
+.model-message {
+  background-color: var(--plum);
+  color: white;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button-container button {
+  flex: 1;
+  margin: 0 5px;
+}
+
+.model-message {
+  position: relative;
+}
+
+.speak-button {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2em;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.button-container button {
+  flex: 1 0 30%;
+  margin: 5px;
 }
