@@ -126,3 +126,8 @@ button {
   flex: 1 0 30%;
   margin: 5px;
 }
+
+.leaflet-marker-icon {
+  background: none;
+  border: none;
+}

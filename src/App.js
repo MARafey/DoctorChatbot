@@ -4,6 +4,7 @@ import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import './App.css';
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
+import {CustomMarker} from "./CustomMarker";
 
 function LocationMarker() {
   const [position, setPosition] = useState(null);
@@ -29,6 +30,10 @@ export function App() {
   const [isListening, setIsListening] = useState(false);
   const { transcript, resetTranscript } = useSpeechRecognition();
   const synth = useRef(window.speechSynthesis);
+  // const [hospitalLocations, setHospitalLocations] = useState([
+  //   [51.505, -0.09],
+  //   [51.51, -0.1],
+  // ]);
 
   useEffect(() => {
     if (transcript) {
@@ -126,6 +131,9 @@ export function App() {
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
           <LocationMarker />
+          {/*{hospitalLocations.map((position, index) => (*/}
+          {/*  <CustomMarker key={index} position={position} />*/}
+          {/*))}*/}
         </MapContainer>
       </div>
     </div>
