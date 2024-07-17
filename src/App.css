@@ -1,7 +1,6 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     font-family: Georgia;
 }
 
@@ -20,7 +19,7 @@
 }
 
 .navbar {
-  width: 300px;
+  width: 350px;
   display: flex;
   flex-direction: column;
   padding: 20px;
@@ -31,6 +30,7 @@
   flex-grow: 1;
   overflow-y: auto;
   margin-bottom: 20px;
+    padding: 20px;
 }
 
 .chat-history {
@@ -58,7 +58,7 @@
 }
 
 textarea {
-  width: 100%;
+  width: 80%;
   margin-bottom: 10px;
   background-color: rgba(255, 255, 255, 0.1);
   color: white;
@@ -79,10 +79,7 @@ button {
   padding: 10px;
   border-radius: 4px;
   cursor: pointer;
-/*  giving the button a circular look*/
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
+
 }
 
 .user-message {
